@@ -3,6 +3,9 @@
 Firmware for a wireless three-pedal keyboard, built with
 [RMK](https://rmk.rs), a feature-rich keyboard firmware written in Rust.
 
+See the Seeed Studio [XIAO nRF52840 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
+for the controller's pin assignments.
+
 ## uf2 support
 
 If you’re using the Adafruit_nRF52_Bootloader (pre-installed on the nice!nano), you’re in luck! This bootloader supports the .uf2 firmware format, which eliminates the need for a debugging probe to flash your firmware. RMK uses the `cargo-make` tool to generate .uf2 firmware, with the generation process defined in the `Makefile.toml`.
