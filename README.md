@@ -6,6 +6,21 @@ Firmware for a wireless three-pedal keyboard, built with
 See the Seeed Studio [XIAO nRF52840 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
 for the controller's pin assignments.
 
+## Pedals
+
+`Meh` means Control+Option+Shift on macOS. Tap-hold actions use a 1-second
+hold threshold.
+
+| Pedal | Position | Tap | Hold for 1 second |
+| --- | --- | --- | --- |
+| 1 | Left | Meh+F16 | Reserved for a future control layer |
+| 2 | Middle | Meh+F17 | Mute audio output |
+| 3 | Right | Meh+M | Meh+Backspace |
+
+Pedal 1 is also the bootmagic paddle. Hold it while resetting or powering on
+the XIAO to enter the UF2 bootloader. The future control layer is intended for
+actions such as reset and Bluetooth pairing.
+
 ## uf2 support
 
 If you’re using the Adafruit_nRF52_Bootloader (pre-installed on the nice!nano), you’re in luck! This bootloader supports the .uf2 firmware format, which eliminates the need for a debugging probe to flash your firmware. RMK uses the `cargo-make` tool to generate .uf2 firmware, with the generation process defined in the `Makefile.toml`.

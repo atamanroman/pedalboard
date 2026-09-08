@@ -37,7 +37,9 @@ layers = 1
 [[keymap.layer]]
 name = "base"
 keys = """
-F13 F14 F15
+WM(F16, LCtrl | LAlt | LShift)
+TH(WM(F17, LCtrl | LAlt | LShift), KbMute, pedal)
+TH(WM(m, LCtrl | LAlt | LShift), WM(bspc, LCtrl | LAlt | LShift), pedal)
 """
 
 [ble]
@@ -53,3 +55,6 @@ enabled = true
 # charge_state.low_active = false
 # charge_led.pin = "P0_29"
 # charge_led.low_active = false
+
+[behavior.morse.profiles.pedal]
+hold_timeout = "1000ms"
