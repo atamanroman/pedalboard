@@ -10,7 +10,16 @@ edition = "2021"
 license = "PolyForm-Noncommercial-1.0.0"
 
 [dependencies]
-rmk = { version = "0.9", features = ["async_matrix", "nrf52840_ble", "adafruit_bl"] }
+rmk = { version = "0.9", default-features=false, features = [
+    # default features
+    "defmt",
+    "storage",
+    "watchdog",
+    # for nrf52840_ble
+    "async_matrix",
+    "nrf52840_ble",
+    "adafruit_bl"
+] }
 nrf-sdc = { version = "0.4.0", features = [
     "defmt",
     "peripheral",

@@ -3,46 +3,42 @@ name = "pedalboard"
 product_name = "pedalboard"
 vendor_id = 0x4c4b
 product_id = 0x4643
-manufacturer = "RMK"
+manufacturer = "neonforest.org"
 chip = "nrf52840"
 
+[host]
+vial_enabled = false
+rynk_enabled = false
+
 [matrix]
-# Row and col pins are mandatory
-row_pins = ["P1_04", "P1_06", "P0_31", "P1_11"]
-col_pins = ["P0_02", "P1_15", "P1_13"]
-# RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
-# row2col = true
+matrix_type = "direct_pin"
+
+# Example only: replace these with the actual nRF GPIO names
+# corresponding to the XIAO pins you wire the pedals to.
+direct_pins = [
+    ["P0_02", "P0_03", "P0_28"]
+]
+
+# Each switch connects GPIO -> switch -> GND.
+# RMK enables the pull-up and treats LOW as pressed.
+direct_pin_low_active = true
 
 [layout]
-rows = 4
+rows = 1
 cols = 3
+
 map = """
-(0,0)  (0,1)  (0,2)
-(1,0)  (1,1)  (1,2)
-(2,0)  (2,1)  (2,2)
-(3,0)  (3,1)  (3,2)
+(0,0) (0,1) (0,2)
 """
 
 [keymap]
-layers = 3
+layers = 1
 
-[[keymap.layer]] # layer 0
+[[keymap.layer]]
+name = "base"
 keys = """
-A       B           C
-Kc1     Kc2         Kc3
-LCtrl   MO(1)       LShift
-OSL(1)  LT(2, Kc9)  LM(1, LShift | LGui)
+F13 F14 F15
 """
-
-[[keymap.layer]] # layer 1
-keys = """
-TO(1)  TT(1)  TG(2)
-DF(1)  _      _
-_      _      _
-_      _      _
-"""
-
-
 
 [ble]
 enabled = true
