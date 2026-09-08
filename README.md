@@ -35,6 +35,22 @@ Most nice!nano compatible boards have bootloader with SoftDevice pre-flashed. Si
 
 RMK defaults to USB-priority mode if a USB cable is connected. After flashing, remember to disconnect the USB cable, or [switch to BLE-priority mode](https://rmk.rs/docs/features/wireless.html#multiple-profile-support) by pressing User11(Switch Output) key.
 
+## Future option: BLE-only with Feather nRF52832
+
+RMK 0.9 supports the Adafruit Feather nRF52832 through its `nrf52832_ble`
+feature. The current direct-pin GPIOs are also exposed on the Feather:
+
+- `P0_02`: A0
+- `P0_03`: A1
+- `P0_28`: A4
+
+This is not a drop-in firmware target. The nRF52832 has 512 KiB flash, 64 KiB
+RAM, and no native USB peripheral, so keyboard output is BLE-only. The build
+would need to use `nrf52832` features in RMK, `nrf-sdc`, `nrf-mpsl`, and
+`embassy-nrf`, plus an nRF52832 memory map. The current USB mass-storage UF2
+workflow does not work on this board; use the Feather's serial DFU bootloader or
+an SWD probe instead.
+
 ## License
 
 Except for third-party components, this project is licensed under the
