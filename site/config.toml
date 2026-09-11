@@ -1,0 +1,55 @@
+base_url = "https://pedalboard.atamanroman.dev"
+title = "pedalboard"
+description = "a wireless three-pedal keyboard for hands-free shortcuts"
+default_language = "en"
+theme = "zap"
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+minify_html = true
+
+[markdown]
+smart_punctuation = true
+
+[markdown.highlighting]
+light_theme = "github-light"
+dark_theme = "github-dark"
+
+[extra]
+keywords = "foot pedal, keyboard, bluetooth, RMK, nRF52840, macOS"
+footer_text = "three pedals for shortcuts that should not need hands"
+inline_icons = false
+menu_links = [
+  { name = "Home", url = "$BASE_URL/" },
+  { name = "Build", url = "$BASE_URL/#build-and-flash" },
+  { name = "Source", url = "https://git.neonforest.org/ra/pedalboard" },
+  { name = "Projects", url = "https://www.atamanroman.dev/projects/" },
+]
+
+[extra.brand]
+header_gap = "5rem"
+lines = [
+  { text = '█▀█ █▀▄', color = "#d97706" },
+  { text = '█▀▀ █▀▄', color = "#d97706" },
+  { text = '▀   ▀▀ ', color = "#d97706" },
+]
+
+[extra.palette]
+light_background = "#fafaf9"
+light_text = "#1c1917"
+light_muted = "#44403c"
+light_link = "#b45309"
+light_visited = "#92400e"
+light_accent = "#d97706"
+light_surface = "#f5f5f4"
+light_selection = "#fde68a"
+light_selection_text = "#1c1917"
+dark_background = "#171512"
+dark_text = "#fafaf9"
+dark_muted = "#d6d3d1"
+dark_link = "#fbbf24"
+dark_visited = "#f59e0b"
+dark_accent = "#fcd34d"
+dark_surface = "#292524"
+dark_selection = "#b45309"
+dark_selection_text = "#ffffff"

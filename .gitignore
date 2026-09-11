@@ -1,4 +1,13 @@
 target
+/site/public
+/result
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
 
 *.bin
 *.elf
