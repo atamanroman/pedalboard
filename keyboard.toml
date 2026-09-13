@@ -12,6 +12,7 @@ rynk_enabled = false
 
 [matrix]
 matrix_type = "direct_pin"
+bootmagic = [0, 0]
 
 # Example only: replace these with the actual nRF GPIO names
 # corresponding to the XIAO pins you wire the pedals to.
@@ -56,5 +57,14 @@ enabled = true
 # charge_led.pin = "P0_29"
 # charge_led.low_active = false
 
+[behavior.combo]
+timeout = "100ms"
+combos = [
+    { actions = ["WM(F16, LCtrl | LAlt | LShift)", "TH(WM(m, LCtrl | LAlt | LShift), WM(bspc, LCtrl | LAlt | LShift), pedal)"], output = "TH(No, Reboot, reset)" }
+]
+
 [behavior.morse.profiles.pedal]
 hold_timeout = "1000ms"
+
+[behavior.morse.profiles.reset]
+hold_timeout = "2000ms"

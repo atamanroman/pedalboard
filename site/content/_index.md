@@ -19,7 +19,7 @@ The default layout emits uncommon macOS shortcuts for automation tools to pick u
 | Middle | Meh + F17 | Mute audio output |
 | Right | Meh + M | Meh + Backspace |
 
-Hold the left pedal while resetting or powering on the controller to enter the UF2 bootloader.
+Hold the left pedal while resetting or powering on the controller to enter the UF2 bootloader. While the firmware is running, press the left and right pedals together and hold both for 2 seconds to reboot the controller.
 
 ## Hardware
 

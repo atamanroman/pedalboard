@@ -18,8 +18,9 @@ hold threshold.
 | 3 | Right | Meh+M | Meh+Backspace |
 
 Pedal 1 is also the bootmagic paddle. Hold it while resetting or powering on
-the XIAO to enter the UF2 bootloader. The future control layer is intended for
-actions such as reset and Bluetooth pairing.
+the XIAO to enter the UF2 bootloader. While the firmware is running, press
+pedals 1 and 3 together and hold both for 2 seconds to reboot the controller.
+The future control layer is intended for actions such as Bluetooth pairing.
 
 ## uf2 support
 
