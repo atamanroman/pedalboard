@@ -44,7 +44,7 @@ layers = 1
 [[keymap.layer]]
 name = "base"
 keys = """
-@focus_terminal
+TH(@focus_terminal, No, pedal)
 TH(@focus_calc, MediaPlayPause, pedal)
 TH(@mute_call, @end_call, pedal)
 """
