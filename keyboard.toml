@@ -44,7 +44,7 @@ layers = 1
 [[keymap.layer]]
 name = "base"
 keys = """
-TH(@focus_terminal, No, pedal)
+TD(0)
 TH(@focus_calc, MediaPlayPause, pedal)
 TH(@mute_call, @end_call, pedal)
 """
@@ -63,10 +63,9 @@ enabled = true
 # charge_led.pin = "P0_29"
 # charge_led.low_active = false
 
-[behavior.combo]
-timeout = "100ms"
-combos = [
-    { actions = ["WM(t, LCtrl | LAlt | LShift)", "TH(WM(m, LCtrl | LAlt | LShift), WM(bspc, LCtrl | LAlt | LShift), pedal)"], output = "TH(No, Reboot, reset)" }
+[behavior.morse]
+morses = [
+  { tap = "WM(t, LCtrl | LAlt | LShift)", hold_after_tap = "Bootloader", profile = "reset" }
 ]
 
 [behavior.morse.profiles.pedal]
