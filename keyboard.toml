@@ -32,15 +32,21 @@ map = """
 (0,0) (0,1) (0,2)
 """
 
+[aliases]
+focus_terminal = "WM(t, LCtrl | LAlt | LShift)"
+focus_calc = "WM(5, LCtrl | LAlt | LShift)"
+mute_call = "WM(m, LCtrl | LAlt | LShift)"
+end_call = "WM(bspc, LCtrl | LAlt | LShift)"
+
 [keymap]
 layers = 1
 
 [[keymap.layer]]
 name = "base"
 keys = """
-WM(F16, LCtrl | LAlt | LShift)
-TH(WM(F17, LCtrl | LAlt | LShift), KbMute, pedal)
-TH(WM(m, LCtrl | LAlt | LShift), WM(bspc, LCtrl | LAlt | LShift), pedal)
+@focus_terminal
+TH(@focus_calc, MediaPlayPause, pedal)
+TH(@mute_call, @end_call, pedal)
 """
 
 [ble]
@@ -60,7 +66,7 @@ enabled = true
 [behavior.combo]
 timeout = "100ms"
 combos = [
-    { actions = ["WM(F16, LCtrl | LAlt | LShift)", "TH(WM(m, LCtrl | LAlt | LShift), WM(bspc, LCtrl | LAlt | LShift), pedal)"], output = "TH(No, Reboot, reset)" }
+    { actions = ["WM(t, LCtrl | LAlt | LShift)", "TH(WM(m, LCtrl | LAlt | LShift), WM(bspc, LCtrl | LAlt | LShift), pedal)"], output = "TH(No, Reboot, reset)" }
 ]
 
 [behavior.morse.profiles.pedal]
