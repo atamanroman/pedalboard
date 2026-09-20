@@ -12,14 +12,15 @@ Use it over Bluetooth or USB for push-to-talk, muting, automation, or any action
 ## Controls
 
 The default layout emits uncommon macOS shortcuts for automation tools to pick up. “Meh” means Control + Option + Shift.
+Tap-hold means tap then hold: a quick press sends the Tap action and a longer press sends the Hold action.
 
-| Pedal | Tap | Hold for one second |
+| Pedal | Tap | Hold |
 | --- | --- | --- |
-| Left | Meh + F16 | — |
-| Middle | Meh + F17 | Mute audio output |
+| Left | Meh + T | Bootloader (2 s) |
+| Middle | Meh + 5 | Play/Pause |
 | Right | Meh + M | Meh + Backspace |
 
-Hold the left pedal while resetting or powering on the controller to enter the UF2 bootloader. While the firmware is running, press the left and right pedals together and hold both for 2 seconds to reboot the controller.
+Hold the left pedal while resetting or powering on the controller to enter the UF2 bootloader. While the firmware is running, hold the left pedal for 2 seconds to enter the bootloader again.
 
 ## Hardware
 

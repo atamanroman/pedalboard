@@ -8,19 +8,19 @@ for the controller's pin assignments.
 
 ## Pedals
 
-`Meh` means Control+Option+Shift on macOS. Tap-hold actions use a 1-second
-hold threshold.
+`Meh` means Control+Option+Shift on macOS. Tap-hold means tap then hold: a
+quick press sends the Tap action and a longer press sends the Hold action.
+Hold thresholds are 1 second (2 seconds for pedal 1).
 
-| Pedal | Position | Tap | Hold for 1 second |
+| Pedal | Position | Tap | Hold |
 | --- | --- | --- | --- |
-| 1 | Left | Meh+F16 | Reserved for a future control layer |
-| 2 | Middle | Meh+F17 | Mute audio output |
+| 1 | Left | Meh+T | Enter bootloader (2 s) |
+| 2 | Middle | Meh+5 | Play/Pause |
 | 3 | Right | Meh+M | Meh+Backspace |
 
 Pedal 1 is also the bootmagic paddle. Hold it while resetting or powering on
-the XIAO to enter the UF2 bootloader. While the firmware is running, press
-pedals 1 and 3 together and hold both for 2 seconds to reboot the controller.
-The future control layer is intended for actions such as Bluetooth pairing.
+the XIAO to enter the UF2 bootloader. While the firmware is running, hold pedal
+1 for 2 seconds to enter the bootloader again.
 
 ## uf2 support
 
